@@ -5,9 +5,9 @@ import BlackKey from './blackkey.js'
 
 export default function App() {
 
-const key1 = { top: 149, left: 490,} 
-const key2 = { top: 149, left: 640,} 
-const key3 = { top: 149, left: 790,} 
+const key1 = { top: 120, left: 650,} 
+const key2 = { top: 120, left: 800,} 
+const key3 = { top: 120, left: 950,} 
 
 let audios = { 
   Audio1: new Audio('https://ia600106.us.archive.org/13/items/24-piano-keys/key13.mp3'),
