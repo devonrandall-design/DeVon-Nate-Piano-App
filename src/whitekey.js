@@ -1,6 +1,10 @@
 import React from 'react'
 
-export default function WhiteKey(props) {
+export default function WhiteKey( {keystroke} ) {
 
-  return <div className="white-key"></div>
+function play(keystroke) {
+  keystroke.play()
+}
+
+  return <div onClick={() => play(keystroke)} className="white-key"></div>
 }
