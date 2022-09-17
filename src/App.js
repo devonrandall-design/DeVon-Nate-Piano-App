@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./style.css";
 import WhiteKey from './whitekey.js'
 import BlackKey from './blackkey.js'
@@ -22,10 +22,12 @@ let audios = {
 
 
 
+
+
   return (
     <div className="main">
     <h1>PIANO APP</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <p>Press a Button</p>
       <div className="piano-container">
       <WhiteKey keystroke={audios.Audio1}/>
       <BlackKey keystroke={audios.Audio5} position={key1} />

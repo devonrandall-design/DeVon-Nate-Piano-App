@@ -2,29 +2,36 @@ import React, {useState} from 'react'
 
 export default function WhiteKey( {keystroke} ) {
 
-const [isClicked, setClick] = useState(false)
+const [color, setColor] = useState('#FFFFFF')
+let isClicked = false
+
+
 
 function play(keystroke) {
 
 if (isClicked === false) {
   keystroke.play()
- setClick(true)
+ isClicked = true
 
-  setTimeout(() => {
-    alert(isClicked)
-    
-    
-  }, 6000)
+ setTimeout(() => {
+isClicked = false
+ }, 6000)
+}
+
+if (isClicked === true) {
+  keystroke.currentTime = 0;
+  keystroke.play()
+}
+
+
+
+
+
+
+
+
 
 }
 
-if (isClicked) {
-  setClick(false)
-  return
-
-}
-
-}
-
-  return <div onClick={() => play(keystroke)} className="white-key"></div>
+  return <div style={{backgroundColor: color}} onMouseDown={() => {setColor('#5fb0b7')}} onMouseUp={() => {setColor('#FFFFFF')}} onClick={() => play(keystroke)} className="white-key"></div>
 }
